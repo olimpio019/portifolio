@@ -179,7 +179,7 @@ Stack: Next.js, TypeScript, Prisma ORM, PostgreSQL.
                     Veja como funciona o sistema de gestão imobiliária acessando a demonstração abaixo.
                   </p>
                   <a 
-                    href="dre-mu.vercel.app" 
+                    href="https://dre-mu.vercel.app" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="game-button text-xs sm:text-sm inline-block"
