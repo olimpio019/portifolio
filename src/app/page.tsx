@@ -159,7 +159,7 @@ export default function Home() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 animate-glow">
             Olá, Mundo!
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 h-8">{typing}</p>
+          <p className="text-lg sm:text-xl md:text-2xl mb-12 h-12">{typing}</p>
           <div className="animate-float space-y-4">
             <button 
               onClick={() => scrollToSection('projects')}
