@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00ff00;
+  --secondary: #ff00ff;
+  --background: #0a0a0a;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Press Start 2P', cursive;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .game-button {
+    @apply px-3 sm:px-6 py-2 sm:py-3 bg-primary text-black font-bold rounded-lg 
+           hover:bg-opacity-80 transition-all duration-300 
+           border-2 border-primary hover:border-secondary;
+  }
+  
+  .game-card {
+    @apply bg-opacity-20 backdrop-blur-lg rounded-xl p-4 sm:p-6 
+           border border-primary hover:border-secondary 
+           transition-all duration-300;
+  }
+
+  .pixel-corners {
+    @apply relative;
+    clip-path: polygon(
+      0 10px,
+      10px 10px,
+      10px 0,
+      calc(100% - 10px) 0,
+      calc(100% - 10px) 10px,
+      100% 10px,
+      100% calc(100% - 10px),
+      calc(100% - 10px) calc(100% - 10px),
+      calc(100% - 10px) 100%,
+      10px 100%,
+      10px calc(100% - 10px),
+      0 calc(100% - 10px)
+    );
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 360px) {
+  .game-button {
+    @apply px-2 py-1 text-xs;
+  }
+  
+  .game-card {
+    @apply p-3;
+  }
+}
+
+/* Ajustes para telas médias */
+@media (min-width: 768px) {
+  .container {
+    @apply px-6;
+  }
+}
+
+/* Ajustes para telas grandes */
+@media (min-width: 1280px) {
+  .container {
+    @apply px-8;
+  }
+} 
