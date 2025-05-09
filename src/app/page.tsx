@@ -81,6 +81,7 @@ export default function Home() {
       description: 'E-commerce completo para tatuagens temporárias com sistema de pagamento PIX, painel administrativo, gestão de produtos e sistema de notificações automáticas.',
       tech: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
       link: '/projeto1',
+      demoLink: 'https://tatoomania.vercel.app',
       highlight: true
     },
     {
@@ -88,6 +89,7 @@ export default function Home() {
       description: 'Aplicação web moderna com Next.js e integração com APIs externas',
       tech: ['Next.js', 'TypeScript', 'Tailwind'],
       link: '/projeto2',
+      demoLink: 'https://lanza-doc.vercel.app',
       highlight: false
     },
     {
@@ -95,6 +97,7 @@ export default function Home() {
       description: 'Aplicação web moderna com Next.js e integração com APIs externas',
       tech: ['Next.js', 'TypeScript', 'Tailwind'],
       link: '/projeto3',
+      demoLink: 'https://dre-mu.vercel.app/',
       highlight: false
     },
   ];
@@ -222,12 +225,24 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-              <Link
-                href={project.link}
-                className="game-button inline-block text-xs sm:text-sm transform hover:scale-110 transition-transform duration-300"
-              >
-                Ver Projeto
-              </Link>
+              <div className="flex gap-4">
+                <Link
+                  href={project.link}
+                  className="game-button inline-block text-xs sm:text-sm transform hover:scale-110 transition-transform duration-300"
+                >
+                  Ver Projeto
+                </Link>
+                {project.demoLink && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="game-button inline-block text-xs sm:text-sm transform hover:scale-110 transition-transform duration-300"
+                  >
+                    Demo
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>

@@ -195,7 +195,7 @@ Stack: Next.js, TypeScript, Prisma ORM, PostgreSQL.
         {/* Footer */}
         <footer className="mt-8 sm:mt-12 py-6 sm:py-8 text-center border-t border-primary/20">
           <p className="text-xs sm:text-sm">
-            Desenvolvido com 💚 para transformar a gestão imobiliária
+            Desenvolvido com 💚 para transformar a gestão
           </p>
         </footer>
       </main>
